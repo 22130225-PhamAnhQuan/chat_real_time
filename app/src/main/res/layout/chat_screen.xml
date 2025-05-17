@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Tin nhắn đã gửi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Thanh công cụ trên cùng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"> <!-- Tránh lỗi canh lệch chiều cao -->
+
+                <!-- Mũi tên, avatar, tên người dùng -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Back"
+                        android:src="@drawable/back" />
+
+                    <ImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/circle_mask"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Nguyễn Văn A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Các icon bên phải -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgPhone"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Phone"
+                        android:src="@drawable/phone" />
+
+                    <ImageView
+                        android:id="@+id/imgCamera"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="Camera"
+                        android:src="@drawable/videocall" />
+
+                    <ImageView
+                        android:id="@+id/imgInfo"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="Info"
+                        android:src="@drawable/info" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Tin nhắn đã gửi -->
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_message_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_sent"
+            android:maxWidth="250dp"
+            android:padding="10dp"
+            android:text="Xin chào!"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Tin nhắn đã nhận -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/text_message_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_sent"
+            android:maxWidth="250dp"
+            android:padding="10dp"
+            android:text="Xin chào!"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:padding="8dp">
+
+        <!-- Nội dung tin nhắn -->
+
+        <!-- Avatar người gửi -->
+        <ImageView
+            android:id="@+id/imgSenderAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_mask"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/text_message_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_received"
+            android:maxWidth="250dp"
+            android:padding="10dp"
+            android:text="Chào bạn!"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Nội dung chat cuộn được -->
+        <ScrollView
+            android:id="@+id/scrollChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/chatInputLayout"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/chatMessagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <!-- Thanh nhập tin nhắn dính dưới -->
+        <LinearLayout
+            android:id="@+id/chatInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#F5F5F5"
+            android:gravity="center_vertical">
+
+            <!-- Icon Thêm -->
+            <ImageView
+                android:id="@+id/iconAdd"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/add"
+                android:contentDescription="Thêm" />
+
+            <!-- Icon Camera -->
+            <ImageView
+                android:id="@+id/iconCamera"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/camera"
+                android:contentDescription="Camera" />
+
+            <!-- Icon Ảnh -->
+            <ImageView
+                android:id="@+id/iconImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/image"
+                android:contentDescription="Ảnh" />
+
+            <!-- Icon Mic -->
+            <ImageView
+                android:id="@+id/iconMic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/mic"
+                android:contentDescription="Mic" />
+
+            <!-- Ô nhập tin nhắn -->
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_background"
+                android:hint="Nhập tin nhắn..."
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Icon Like -->
+            <ImageView
+                android:id="@+id/iconLike"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/like"
+                android:contentDescription="Like" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
