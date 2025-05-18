@@ -16,40 +16,104 @@
         android:layout_height="120dp"
         android:src="@drawable/avatar"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp"
         android:scaleType="centerCrop"
         android:background="@drawable/circle_background"
         android:clipToOutline="true" />
 
-    <TextView
-        android:id="@+id/text_profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nguyễn Chí Sơn"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:id="@+id/text_profile_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0862309507"
-        android:textSize="16sp"
-        android:textColor="#777"
-        android:layout_marginTop="8dp" />
-
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:text="Tên:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/text_profile_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:textStyle="bold"
+        android:text="Phạm Anh Quân" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_profile_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="abc@gmail.com"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sđt:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_profile_sdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="0355171489"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Address:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_profile_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=""
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_edit_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="270dp"
         android:text="Chỉnh sửa thông tin" />
 
     <Button
