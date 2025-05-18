@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh sửa thông tin"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Tên -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên:"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên..."
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <!-- Email -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập email..."
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <!-- SĐT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại:"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số điện thoại..."
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <!-- Địa chỉ -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ:"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập địa chỉ..."
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <!-- Nút lưu -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lưu"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center" />
+</LinearLayout>
